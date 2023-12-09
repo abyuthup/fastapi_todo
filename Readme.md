@@ -18,6 +18,12 @@ pip install "uvicorn[standard]"
 
 //install database
 pip install sqlalchemy
+# install passlib
+pip install "passlib[bcrypt]"
+# to work with form data and file uploading we need multipart lib.
+pip install python-multipart
+# for jwt 
+pip install "python-jose[cryptography]"
 
 
 ## Run uvicorn server
@@ -28,9 +34,14 @@ uvicorn main:app --reload
 ## connect database with sqlite3
 sqlite3 todos.db
 
+# change show mode to box
+.mode box
+
 
 # select interpreter
 fastapienv/bin/python3.11
+
+
 
 
 # show db schema
@@ -41,5 +52,9 @@ insert into todos (title,description, priority,completed) values ('go to stores'
 
 # quit
 .quit
+
+
+#for random unique string key for jwt secret
+openssl rand -hex 32
 
 
