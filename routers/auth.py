@@ -17,13 +17,14 @@ router = APIRouter(
     tags=["auth"] # this is the tag to group this router in the docs
 )
 
+# openssl rand -hex 32
 SECRET_KEY = "fbd5222323f304be0e3859cce2248cb7ab20bc86846951b0a1b7cbfb62ff581a"
 ALGORITHM = "HS256"
 
 bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl="auth/token")
 
-# openssl rand -hex 32
+
 
 
 def get_db():
