@@ -35,3 +35,5 @@ alembic upgrade fda7c72ebaae
 # add phone_number to user model
 phone_number = Column(String)
 
+# downgrade to remove the added column 
+alembic downgrade -1
