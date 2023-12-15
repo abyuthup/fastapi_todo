@@ -1,4 +1,9 @@
-mysql create table query
+# for mysql
+pip install pymysql
+
+
+
+# mysql create table query
  ################################
 DROP TABLE IF EXISTS `users`;
 
