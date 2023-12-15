@@ -3,7 +3,7 @@ pip install alembic
 
 
 # init alembic
-alembic init <alembic env name> ie , alembic init alembic
+alembic init "alembic env name" ie , alembic init alembic
 
 
 # add database path to alembic.ini
@@ -29,7 +29,7 @@ def upgade() -> None:
     op.add_column('users',sa.Column('phone_number',sa.String(50), nullable=True))
 
 # call upgade alembic revision
-alembic upgrade <revisionId>
+alembic upgrade "revisionId"
 alembic upgrade fda7c72ebaae
 
 # add phone_number to user model
