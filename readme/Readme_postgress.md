@@ -1,6 +1,9 @@
 # for postgresql
 pip install psycopg2-binary
 
+# connect app to db
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:test123#@localhost:5432/TodoApplicationDatabase'
+
 # postgress create table query
  ################################
 DROP TABLE IF EXISTS users;

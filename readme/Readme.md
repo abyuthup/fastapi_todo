@@ -28,6 +28,8 @@ pip install "python-jose[cryptography]"
 pip install psycopg2-binary
 # for mysql
 pip install pymysql
+# for alembic
+pip install alembic
 
 
 ## Run uvicorn server

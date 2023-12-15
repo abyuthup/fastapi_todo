@@ -1,7 +1,8 @@
 # for mysql
 pip install pymysql
 
-
+# connect app to db
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:1425mysql#@127.0.0.1:3306/TodoApplicationDatabase'
 
 # mysql create table query
  ################################
