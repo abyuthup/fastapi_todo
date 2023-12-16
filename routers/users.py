@@ -48,3 +48,11 @@ async def change_password(user:user_dependency,db: db_dependency,user_verificati
     db.add(user_model)
     db.commit()
     
+@router.put("/phonenumber/{phone_number}",status_code=status.HTTP_204_NO_CONTENT)
+async def change_phone_number(user:user_dependency,db: db_dependency,phone_number:str=Path(min_length=3,max_length=10)):
+    if user is None:
+        return HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid authentication credentials")
+    user_model = db.query(Users).filter(Users.id == user.get("id")).first()
+    user_model.phone_number = phone_number
+    db.add(user_model)
+    db.commit()    

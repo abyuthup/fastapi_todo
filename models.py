@@ -13,6 +13,7 @@ class Users(Base):
     hashed_password = Column(String(50))
     is_active = Column(Boolean, default=True)
     role = Column(String(50))
+    phone_number = Column(String(50), nullable=True)
 
 class Todos(Base):
     __tablename__ = 'todos'
